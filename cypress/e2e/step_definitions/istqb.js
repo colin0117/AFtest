@@ -1,6 +1,6 @@
 import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
 
-When('User is at the home page', () => {
+Given('User is at the home page', () => {
 	cy.visit('https://isqi.org/en/');
 
 	// May need to specify the country - so check and see if pop-up is present
@@ -47,7 +47,7 @@ When('User clicks on button {string}', (button) => {
 	cy.findByText('Product successfully added to your shopping cart', { timeout: 20 * 1000 }).should('exist');
 });
 
-When('User sees the cost of the course', (button) => {
+Then('User sees the cost of the course', (button) => {
 	cy.findByText('Total (tax incl.)')
 		.next('span')
 		.invoke('text')

@@ -1,5 +1,4 @@
 Feature: Animal Friends Insurance Test Automation challenge
-
     Scenario: Display cost of ISTQB exam
         Given User is at the home page
         When User searches for 'foundation'
