@@ -53,6 +53,6 @@ Then('User sees the cost of the course', (button) => {
 		.invoke('text')
 		.then((txt) => {
 			cy.wrap(txt).as('courseCost');
-			cy.log('Cost is ' + txt + '. This is recorded and can be accessed with - cy.get("@courseCost")');
+			cy.task('log', 'Cost is ' + txt + '. This is recorded and can be accessed with - cy.get("@courseCost")');
 		});
 });

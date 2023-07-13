@@ -12,6 +12,13 @@ const setupNodeEvents = async (on, config) => {
 			plugins: [createEsbuildPlugin.default(config)]
 		})
 	);
+	on('task', {
+		log(message) {
+			// To use: cy.task("log", "my message");
+			console.log(new Date() + ': ' + message);
+			return null;
+		}
+	});
 	return config;
 };
 
@@ -21,6 +28,6 @@ module.exports = defineConfig({
 		setupNodeEvents,
 		specPattern: '**/*.feature',
 		excludeSpecPattern: ['*.js'],
-		reporter: require.resolve("@badeball/cypress-cucumber-preprocessor/pretty-reporter")
+		reporter: require.resolve('@badeball/cypress-cucumber-preprocessor/pretty-reporter')
 	}
 });
