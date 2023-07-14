@@ -27,6 +27,7 @@ module.exports = defineConfig({
 	e2e: {
 		setupNodeEvents,
 		specPattern: '**/*.feature',
+		baseUrl: 'https://isqi.org/en',
 		excludeSpecPattern: ['*.js'],
 		reporter: require.resolve('@badeball/cypress-cucumber-preprocessor/pretty-reporter')
 	}

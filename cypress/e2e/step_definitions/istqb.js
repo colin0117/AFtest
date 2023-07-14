@@ -1,7 +1,7 @@
 import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
 
 Given('User is at the home page', () => {
-	cy.visit('https://isqi.org/en/');
+	cy.visit('/');
 
 	// May need to specify the country - so check and see if pop-up is present
 	cy.get('.isqi-cust-popup-body').then(($el) => {
